@@ -163,4 +163,3 @@ def mag():
 
     return xGyro, yGyro, zGyro
 
-

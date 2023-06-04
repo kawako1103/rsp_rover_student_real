@@ -41,21 +41,21 @@ def main():
     # 正回転 -> 停止 -> 逆回転 -> 停止
     try:
         # 最高速で正回転 - 1秒
-        print("最高速で正回転 - 1秒")
+        print("最高速で正回転 -  1秒")
         motor_left.value = 1.0
         motor_right.value = 1.0
         sleep(1)
         # 少し遅く正回転 - 1秒
-        print("少し遅く正回転 - 1秒")
+        print("少し遅く正回転 - 2秒")
         motor_left.value = 0.75
         motor_right.value = 0.75
-        sleep(3)
-        # 遅く正回転 - 2秒
+        sleep(2)
+        # 遅く正回転 : 1秒
         print("遅く正回転 - 1秒")
         motor_left.value = 0.5
         motor_right.value = 0.5
         sleep(1)
-        # 停止 - 1秒
+        """" # 停止 - 1秒
         motor_left.value = 0.0
         motor_right.value = 0.0
         sleep(1)
@@ -68,12 +68,13 @@ def main():
         print("少し遅く逆回転 - 1秒")
         motor_left.value = -0.75
         motor_right.value = -0.75
-        sleep(3)
-        # 遅く逆回転 - 2秒
-        print("遅く逆回転 - 1秒")
-        motor_left.value = -0.5
-        motor_right.value = -0.5
         sleep(1)
+        # 遅く逆回転 - 1秒
+        print("遅く逆回転 - 1秒")
+        motor_left.value = -0.50
+        motor_right.value = -0.50
+        sleep(1)
+        """
         # 停止 - 1秒
         motor_left.value = 0.0
         motor_right.value = 0.0
@@ -104,25 +105,36 @@ def rotate():
    # 右5回転くらい  -> 停止
     try:
         # 最高速で正回転 - 1秒
-        print("最高速で正回転 - 1秒")
-        motor_left.value = -1.0
+        print("最高速で正回転 : 2秒")
+        motor_left.value = 1.0
         motor_right.value = 1.0
-        sleep(1)
-        # 少し遅く正回転 - 1秒
-        print("少し遅く正回転 - 1秒")
-        motor_left.value = -0.75
-        motor_right.value = 0.75
-        sleep(15)
-        # 遅く正回転 - 2秒
-        print("遅く正回転 - 1秒")
+        sleep(2)
+        # 遅く正回転 - 1秒
+        print("遅く正回転 : 2秒")
+        motor_left.value = 0.5
+        motor_right.value =-0.5
+        sleep(2)
+        #停止：2秒
+        print("停止：2秒") 
+        motor_left.value = 0
+        motor_right.value=0
+        sleep(2)
+        """# 遅く逆回転 : 2秒
+        print("遅く逆回転 : 2秒")
         motor_left.value = -0.5
-        motor_right.value = 0.5
-        sleep(1)
-        # 停止 - 1秒
+        motor_right.value =--0.5
+        sleep(2)
+        #最高速度で逆回転：2秒
+        print("最高速度で逆回転：2秒")
+        motor_left.value=-1.0
+        motor_right.value=-1.0
+        sleep(2)
+        # 停止 : 2
+        print("停止：2秒")
         motor_left.value = 0.0
         motor_right.value = 0.0
-        sleep(1)
-        #
+        sleep(2)
+        """
     except KeyboardInterrupt:
         print("stop")
         # 停止
@@ -130,5 +142,4 @@ def rotate():
         motor_right.value = 0.0
 
     return
-
     
